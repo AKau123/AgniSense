@@ -1,127 +1,94 @@
 # AgniSense
 # 🚦 QNX-Based Real-Time Traffic Congestion Control System using SDV & V2V Communication
 
-## 📌 Overview
-This project presents a real-time traffic congestion control system based on a Software Defined Vehicle (SDV) architecture using QNX Real-Time Operating System (RTOS). The system integrates sensing, decision-making, communication, and actuation to enable intelligent traffic management and improve road safety.
-
-It uses Raspberry Pi 4 running QNX RTOS along with ultrasonic sensors, ESP32 modules, and Bluetooth communication to simulate real-world vehicle behavior and coordination.
+## Introduction  
+This project focuses on building a real-time traffic congestion control system using a Software Defined Vehicle (SDV) approach powered by QNX RTOS. It uses a Raspberry Pi 4 along with sensors and communication modules to simulate how vehicles can sense their surroundings, make quick decisions, and coordinate with other vehicles. The goal is to improve traffic flow and enhance road safety through intelligent and real-time control.
 
 ---
 
-## 🎯 Problem Statement
-Modern traffic systems suffer from congestion, delayed human reaction, and lack of communication between vehicles. Existing systems are non-deterministic and fail to provide real-time response, making them unsuitable for safety-critical applications.
+## Problem Statement  
+Current traffic systems lack real-time response and coordination between vehicles. Most systems depend on human reaction, which leads to delays, congestion, and accidents. There is a need for a system that can respond quickly, share information, and manage traffic more efficiently.
 
 ---
 
-## 💡 Proposed Solution
-The proposed system enables:
-- Real-time sensing using ultrasonic sensors  
-- Fast decision-making using QNX RTOS  
-- Vehicle-to-Vehicle (V2V) communication  
-- Intelligent traffic control and emergency prioritization  
+## Proposed Solution  
+This system:
+- Monitors surroundings using sensors  
+- Processes data in real time using QNX RTOS  
+- Communicates with other vehicles using V2V  
+- Controls vehicle movement based on traffic conditions  
 
 ---
 
-## ⚙️ Key Features
-- ✅ Real-time monitoring and fast response (<50 ms)  
-- ✅ Deterministic execution using QNX RTOS  
-- ✅ State-based decision model (S0–S3)  
-- ✅ V2V communication using Bluetooth (HC-05 + ESP32)  
-- ✅ Emergency vehicle priority handling  
-- ✅ Integrated sensing, communication, and actuation  
+## Key Features  
+- Real-time monitoring with fast response (<50 ms)  
+- Deterministic performance using QNX RTOS  
+- State-based decision model (S0–S3)  
+- V2V communication using Bluetooth  
+- Emergency vehicle prioritization  
 
 ---
 
-## 🧠 System Architecture
-The system follows a layered architecture:
-
-1. **QNX Microkernel Layer** – Real-time scheduling and IPC  
-2. **Sensing Layer** – Ultrasonic sensors  
-3. **Perception Layer** – Data filtering and processing  
-4. **Decision Layer** – FSM-based control logic  
-5. **Communication Layer** – V2V using Bluetooth  
-6. **Actuation Layer** – Motor control and alerts  
-
-📷 *(Add your architecture diagram image here)*
+## 🧠 System Architecture  
+The system is organized into layers for better clarity and control:  
+**Sensing → Processing → Decision → Communication → Actuation**
 
 ---
 
-## 🔄 Methodology
-1. Sensor detects distance  
-2. Data processed in QNX RTOS  
-3. Traffic state determined (S0–S3)  
-4. Decision made based on risk  
-5. Data transmitted via Bluetooth  
-6. ESP32 receives and relays data  
-7. Vehicle movement controlled via motor driver  
-8. System repeats continuously  
+## 🔄 Methodology  
+1. Sensor measures distance  
+2. Data is processed in QNX  
+3. Traffic state is determined  
+4. Decision is made  
+5. Information is shared via Bluetooth  
+6. Vehicle movement is adjusted  
 
 ---
 
-## 🧰 Hardware Components
-- Raspberry Pi 4 (QNX RTOS)
-- ESP32 (2 units)
-- Ultrasonic Sensors (HC-SR04)
-- HC-05 Bluetooth Module
-- L298N Motor Driver
-- DC Motors
-- TFT Display (Non-SDV Unit)
-- Power Supply (Power bank & battery)
+## 🧰 Hardware Components  
+- Raspberry Pi 4 (QNX RTOS)  
+- ESP32 modules  
+- Ultrasonic sensors  
+- HC-05 Bluetooth module  
+- L298N motor driver  
+- DC motors  
+- TFT display  
 
 ---
 
-## 💻 Software Components
+## 💻 Software Components  
 - QNX RTOS  
-- C Programming  
-- Multi-threading using `pthread`  
-- UART Communication (`termios`)  
-- QNX System Libraries (`sys/neutrino`)  
+- C programming  
+- Multi-threading (`pthread`)  
+- UART communication  
 
 ---
 
-## 🔌 System Workflow
-- Sensor → QNX Processing → Decision → Communication → Actuation  
-- Continuous feedback loop for real-time adaptation  
+## 📊 Results  
+- Smooth operation in clear road conditions  
+- Gradual speed control during traffic  
+- Immediate stop in emergency situations  
+- Response time below 50 ms  
 
 ---
 
-## 📊 Results
-The system was tested under different scenarios:
-
-### 🚗 Clear Road
-- Vehicle moves at normal speed  
-
-### 🚦 Traffic Condition
-- Vehicle slows down gradually  
-
-### 🚨 Emergency / Obstacle
-- Immediate stop and alert generation  
-
-### 📈 Performance
-- Response Time: < 50 ms  
-- Stable communication  
-- Accurate decision-making  
+## 🚀 Applications  
+- Smart traffic systems  
+- Emergency vehicle management  
+- Collision avoidance  
+- Intelligent transportation  
 
 ---
 
-## 🚀 Applications
-- Smart Traffic Management Systems  
-- Emergency Vehicle Priority Systems  
-- Collision Avoidance Systems  
-- Autonomous Vehicle Safety  
-- Intelligent Transportation Systems  
+## 🔮 Future Scope  
+- GPS and camera integration  
+- AI-based traffic prediction  
+- V2X communication  
+- Real-world deployment  
 
 ---
 
-## 🔮 Future Scope
-- Integration with GPS and camera systems  
-- AI/ML-based predictive traffic analysis  
-- Vehicle-to-Everything (V2X) communication  
-- Deployment in real-world vehicles  
-- Cloud-based traffic monitoring  
-
 ---
-
 ## 👨‍💻 Contributors
 - G.V.S.K.Akhil  
 - E.Deepsika Reddy
